@@ -1,0 +1,44 @@
+﻿<Window x:Class="st10083869TimeManagementApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:st10083869TimeManagementApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Aquamarine">
+    <Grid Margin="0,16,0,-16">
+        <RichTextBox x:Name="richTextBox" Margin="0,0,640,413" Background="Aquamarine" FontStyle="Normal" FontSize="14">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Hello User :)"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="txtCode" TextWrapping="Wrap" Text="Enter Module code:" Margin="10,53,524,357" FontStyle="Normal" RenderTransformOrigin="-2.429,-10.282"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Text=" Enter Module Name:" Margin="10,95,524,313" FontStyle="Normal" RenderTransformOrigin="-2.429,-10.282"/>
+        <TextBox x:Name="txtCredits" TextWrapping="Wrap" Text=" Enter Module Credits:" Margin="10,138,524,270" RenderTransformOrigin="-0.515,-0.285"/>
+        <TextBox x:Name="txtClassHours" TextWrapping="Wrap" Text="Enter the amount of class hours for the week : " Margin="10,184,524,217"/>
+        <Button x:Name="AddModule" Content="Click to add another module" Margin="21,302,584,84" FontFamily="Comic Sans Ms" Click="AddModule_Click" />
+        <TextBox x:Name="txtHours" TextWrapping="Wrap" Text="Enter total number of hours that you spent on this module:  " Margin="10,245,512,153"/>
+        <Button x:Name="RecordHours" Content="Record your Hours" Margin="282,302,400,84" Click="RecordHours"/>
+        <ListBox x:Name="listBox" Margin="480,266,213,47">
+            <ListBox x:Name="lbModules" Height="100" Width="100" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        </ListBox>
+        <Label x:Name="WeeksInSemester" Content="Enter number of weeks in semester:" Margin="504,48,92,357" Background="White"/>
+        <TextBox x:Name="txtWeeksInSemester" TextWrapping="Wrap" Margin="504,95,46,316" TextChanged="textBox_TextChanged"/>
+        <Label x:Name="StartDate" Content="Start Date for First week:" Margin="504,136,46,267" Background="White"/>
+
+        <DatePicker x:Name="datePicker1" HorizontalAlignment="Left" Height="33" Margin="508,184,0,0" VerticalAlignment="Top" Width="200" SelectedDate="{Binding StartDate, Mode=TwoWay}"/>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
